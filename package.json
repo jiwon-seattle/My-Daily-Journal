@@ -1,0 +1,20 @@
+{
+  "name": "my-weather-journal",
+  "version": "1.0.0",
+  "description": "My weather journal app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Jiwon Han",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.10.1",
+    "nodemon": "^2.0.4"
+  }
+}
