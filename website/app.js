@@ -1,8 +1,44 @@
 
+// User's location Info
+
+let lat;
+let lon;
+
+let weatherApi;
+const apiKey = '&appid=71fab47d50ab677f3ba01bf8eef6dc41';
+
+function success (pos) {
+  const crd = pos.coords;
+  lat = crd.latitude;
+  lon = crd.longitude;
+  weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+  console.log(lat);
+  console.log(lon);
+
+};
+
+function error(err) {
+  console.warn(err.code);
+}
+
+const getLocation = async () => {
+  try {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+  } catch( error ) {
+    console.log(error);
+  }
+}
+
+getLocation();
+
+const initialState = async() => {
+  generateData();
+}
+
 /* Global Variables */
 // Weather API
-const weatherApi = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=71fab47d50ab677f3ba01bf8eef6dc41';
 
 // new date 
 let d = new Date();
@@ -46,7 +82,9 @@ const updateData = async() => {
 const generateData = async() => {
   const feelings = document.getElementById('feelings').value;
   const zip = document.getElementById('zip').value;
-  const response = await fetch(`${weatherApi}${zip}${apiKey}`);
+  const response = await fetch(`${weatherApi}${apiKey}`);
+  console.log(response);
+
   console.log(response);
   try {
     const data = await response.json();
@@ -62,4 +100,4 @@ const generateData = async() => {
   }
 }
 
-document.getElementById('generate').addEventListener('click', generateData);
+document.getElementById('generate').addEventListener('click', initialState);
