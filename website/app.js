@@ -73,19 +73,36 @@ const updateData = async() => {
   console.log('updateData');
 
   const data = await getData('/weather');
-  // console.log(data);
-  document.getElementById('date').innerHTML = `${data.date}`;
-  document.getElementById('temp').innerHTML = `${data.temperature}`;
-  document.getElementById('content').innerHTML = data.feelings;
+  console.log('updateData');
+  console.log(data)
+  let i;
+  for (i = 0; i < data.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add('journal' + i);
+    document.getElementById('prevJournals').appendChild(div);
+    
+    let y;
+    const divClasses = ['date', 'temperature', 'feelings'];
+    for (y = 0; y < divClasses.length; y++) {
+      div = document.createElement("div");
+      div.classList.add(divClasses[y]);
+      document.getElementsByClassName('journal' + i)[0].appendChild(div);
+      
+    }
+    document.querySelector('.journal' + i + " " + '.date').innerHTML = `${data[i].date}`;
+    document.querySelector('.journal' + i + " " + '.temperature').innerHTML = `${data[i].temperature}`;
+    document.querySelector('.journal' + i + " " + '.feelings').innerHTML = `${data[i].feelings}`;
+  }
+  // document.getElementById('prevJournals').innerHTML = `${data.date}`;
+  // document.getElementById('temp').innerHTML = `${data.temperature}`;
+  // document.getElementById('content').innerHTML = data.feelings;
 };
 
 const generateData = async() => {
   const feelings = document.getElementById('feelings').value;
   const zip = document.getElementById('zip').value;
   const response = await fetch(`${weatherApi}${apiKey}`);
-  console.log(response);
 
-  console.log(response);
   try {
     const data = await response.json();
     const projectData = {};
