@@ -11,7 +11,7 @@ function success (pos) {
   const crd = pos.coords;
   lat = crd.latitude;
   lon = crd.longitude;
-  weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+  weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
   console.log(lat);
   console.log(lon);
   console.log(weatherApi);
