@@ -23,7 +23,7 @@ Currently the app is deployed via Heroku. Visit https://my-daily-journal-jw.hero
 
 ```bash
   $ git clone https://github.com/jiwon-seattle/My-Daily-Journal.git
-  $ cd into repository
+  $ cd website
   $ npm install  
   # After successfull pkg installtion
   $ npm run dev
