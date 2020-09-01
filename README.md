@@ -88,7 +88,7 @@ This site provides platform for a user to write journals.
 - [Unsplash](https://unsplash.com/) for images
 
  ## Future Development
- 1. ENV Setting for Weather API
+ 1. env Setting for Weather API
 
  2. Auth feature : LogIn/Out
 
