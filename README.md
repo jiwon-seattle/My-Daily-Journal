@@ -1,4 +1,4 @@
-# My Daily Journal
+# My Daily Journal :cherry_blossom:
 
 #### By **Jiwon Han**
 
@@ -13,7 +13,7 @@
 
 ## Instructions
 
-A <strong>Udacity</strong> front-end <em>Weather Journal App </em> project. This is an asynchronous web app that uses Weather API and user data to dynamically update the UI for a My-Daily-Journal App. A journal data from a user is stored in MongoDB database and past journals will be fetched from there.
+A <strong>Udacity</strong> front-end <em>Weather Journal App </em> project. This is an asynchronous web app that uses Weather API and user data to dynamically update the UI for a My-Daily-Journal App. A journal data from a user is stored in MongoDB database and past journals will be fetched from there via server-side rendering.
 
 ### To see Demo web app:
 
@@ -89,7 +89,7 @@ This site provides platform for a user to write journals.
 - [Unsplash](https://unsplash.com/) for images
 
  ## Future Development
- 1. ENV Setting for Weather API
+ 1. env Setting for Weather API
 
  2. Auth feature : LogIn/Out
 
