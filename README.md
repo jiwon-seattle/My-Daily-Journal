@@ -4,13 +4,14 @@
 
 ## Table of Contents
 
-* [Getting Started](#Getting Started)
-* [Technologies](#Technologies)
-* [Glossary](#Glossary)
-* [Bugs](#Bugs)
-* [Contact](#Contact)
+* [Instructions](#Instructions)
+* [Development](#Development)
+* [Tech Stack](#TechStack)
+* [Future Development](#FutureDevelopment)
+* [Author](#Author)
+* [License](#License)
 
-## Getting Started
+## Instructions
 
 A <strong>Udacity</strong> front-end <em>Weather Journal App </em> project. This is an asynchronous web app that uses Weather API and user data to dynamically update the UI for a My-Daily-Journal App. A journal data from a user is stored in MongoDB database and past journals will be fetched from there.
 
@@ -74,7 +75,7 @@ This site provides platform for a user to write journals.
   * Schema has `Date`, `Weather`, `Feeling`.
   * GET/POST orders to DB are executed by corresponding routes.
 
-## Tech Stack & Development Sources
+## Tech Stack
 
 - HTML
 - CSS
@@ -86,15 +87,6 @@ This site provides platform for a user to write journals.
 - [Heroku](https://heroku.com) for deployment
 - [Unsplash](https://unsplash.com/) for images
 
-## Glossary 
-- [Bootstrap](https://getbootstrap.com/) : Buttons, Card, Form for styling.  
-- Image and Letter Hover Effects : Added interactivity to elements and made effects in CSS.
-- Layouts : Used Flex, Grid, Position, Margin, Padding in CSS.
-- [Mapbox](https://www.mapbox.com/) : Fetched a map api and displayed popups for certain locations on click with Maki symbols. 
-- Responsive Web Design : Used media queries to make fittable pages for all devices and DOM to make sliders and scrolling nav bar.
-- [Unsplash](https://unsplash.com/) : Used good quality of pictures from there. Appreciate the best photographers! :sparkles:
-- [Google Script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) : Sending a email to me is set by Google Script.
- 
  ## Future Development
  1. ENV Setting for weather api 
 
