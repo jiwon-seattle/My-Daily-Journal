@@ -10,11 +10,15 @@
   font-family:'Amatic SC', cursive;
 }
 
+.nav-item {
+  border: none; 
+  background: transparent;
+}
+
 body {
   width: 100%;
   min-height: 680px;
   height: auto;
-  border: 3px solid lightcoral;
   background: url(../img/flower.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -25,8 +29,14 @@ body {
   height: auto;
 }
 
+.title {
+  font-size: 30px;
+}
+
 .holder.feel {
-  height: 500px;
+  min-height: 500px;
+  height: auto;
+  text-align: center;
 }
 
 .holder.journal {
