@@ -38,7 +38,7 @@ This site provides platform for a user to write journals.
 1. A user is able to write journal.
 2. When a user clicks `Generate` button, the journal is saved to database.
 3. Daily weather information automatically is fetched via Weather API and saved to database.
-4. When a user clicks `PAST MY JOURNALS`, previous written journals are listed by date in descending order.
+4. When a user clicks `PAST MY JOURNALS`, previous written journals are listed by date in ascending order.
 5. Different weather image is displayed per a weather condition.
 6. When a user clicks `WRITE TODAY'S JOURNAL`, writing section is back.
 7. A user is able to navigate developer's contact pages by clicking icons in the footer section.
