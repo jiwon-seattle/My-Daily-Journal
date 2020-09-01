@@ -1,4 +1,4 @@
-# My Daily Journal
+# My Daily Journal :cherry_blossom:
 
 #### By **Jiwon Han**
 
