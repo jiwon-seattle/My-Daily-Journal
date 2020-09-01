@@ -41,7 +41,7 @@ This site provides platform for a user to write journals.
 6. When a user clicks `WRITE TODAY'S JOURNAL`, writing section is back.
 7. A user is able to navigate developer's contact pages by clicking icons in the footer section.
 
-<img src="../img/website.png" width="700px" height="350px" />
+<img src="website/img/website.png" width="700px" height="350px" />
 
 ### Part 1: FrontEnd 
 
