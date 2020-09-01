@@ -28,6 +28,7 @@ Currently the app is deployed via Heroku. Visit https://my-daily-journal-jw.hero
   # After successfull pkg installtion
   $ npm run dev
 ```
+The site is automatically hosted in http://localhost:8000. Open `index.html`
 
 ## Development
 
