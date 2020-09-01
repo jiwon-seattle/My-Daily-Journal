@@ -4,12 +4,12 @@
 
 ## Table of Contents
 
-* [Instructions](#Instructions)
-* [Development](#Development)
-* [Tech Stack](#TechStack)
-* [Future Development](#FutureDevelopment)
-* [Author](#Author)
-* [License](#License)
+* Instructions
+* Development
+* Tech Stack
+* Future Development
+* Author
+* License
 
 ## Instructions
 
@@ -88,7 +88,7 @@ This site provides platform for a user to write journals.
 - [Unsplash](https://unsplash.com/) for images
 
  ## Future Development
- 1. ENV Setting for weather api 
+ 1. ENV Setting for Weather API
 
  2. Auth feature : LogIn/Out
 
