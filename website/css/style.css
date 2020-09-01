@@ -1,19 +1,54 @@
-.holder.headline, .holder.footer p {
+.holder.headline {
   font-family: 'Tangerine', serif;
   font-size: 48px;
+  text-align: center; 
+  height: 70px; 
+  width: 100%
 }
 
-.col-2, .col-10, .holder.entry {
+.col-2, .holder.journal, .holder.entry {
   font-family:'Amatic SC', cursive;
 }
 
 body {
   width: 100%;
-  min-height: 700px;
+  min-height: 680px;
+  height: auto;
   border: 3px solid lightcoral;
   background: url(../img/flower.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.row {
+  width: 100%; 
+  height: auto;
+}
+
+.holder.feel {
+  height: 500px;
+}
+
+.holder.journal {
+  font-size: 30px;
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+  align-items: center; 
+  width: 90%; 
+  min-height: 500px; 
+  height: auto;
+  justify-content: space-around;
+}
+
+textarea {
+  width: 60%; 
+  height: 350px;
+}
+
+.holder.footer p {
+  font-family: 'Tangerine', serif;
+  font-size: 30px;
 }
 
 .personal.icons {

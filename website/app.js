@@ -14,7 +14,7 @@ function success (pos) {
   weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
   console.log(lat);
   console.log(lon);
-
+  console.log(weatherApi);
 };
 
 function error(err) {
@@ -80,6 +80,8 @@ const updateData = async() => {
     let div = document.createElement("div");
     div.classList.add('journal' + i);
     document.getElementById('prevJournals').appendChild(div);
+    document.getElementsByClassName('journal' + i)[0].style.border="2px solid blue"
+    document.getElementsByClassName('journal' + i)[0].style.width="200px"
     
     let y;
     const divClasses = ['date', 'temperature', 'feelings'];
@@ -108,10 +110,22 @@ const generateData = async() => {
     projectData.date = newDate;
     console.log(projectData);
     await postData('/weather', projectData);
-    updateData();
   } catch (error) {
     console.error("error", error);
   }
 }
 
+function showWriteJournal() {
+  document.querySelector('.holder .entry').style.display = "none";
+  document.querySelector('.holder .journal').style.display = "";
+}
+
+function showPastJournals() {
+  updateData();
+  document.querySelector('.holder .entry').style.display = "";
+  document.querySelector('.holder .journal').style.display = "none";
+}
+
 document.getElementById('generate').addEventListener('click', initialState);
+document.getElementById('pastJournals').addEventListener('click', showPastJournals)
+document.getElementById('newJournal').addEventListener('click', showWriteJournal)
