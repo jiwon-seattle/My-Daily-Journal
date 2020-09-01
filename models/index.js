@@ -6,6 +6,6 @@ mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.journals = require('./journal')(mongoose);
+db.heroku_56vg5r9k = require('./journal')(mongoose);
 
 module.exports = db;
