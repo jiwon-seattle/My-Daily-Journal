@@ -80,7 +80,7 @@ const updateData = async() => {
     let div = document.createElement("div");
     div.classList.add('journal' + i);
     document.getElementById('prevJournals').appendChild(div);
-    document.getElementsByClassName('journal' + i)[0].style.border="2px solid blue"
+  document.getElementsByClassName('journal' + i)[0].style.borderBottom="1px solid  #ffb3b3"
     document.getElementsByClassName('journal' + i)[0].style.width="100%"
     
     let y;
