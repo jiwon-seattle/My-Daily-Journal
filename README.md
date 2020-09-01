@@ -45,12 +45,12 @@ This site provides platform for a user to write journals.
 
 <img src="website/img/website.png" width="700px" height="350px" />
 
-### Part 1: FrontEnd 
+### Part 1: Frontend 
 
 #### HTML/CSS
 
 * Responsive Web Design
-  * Media query used for different size of views 
+  * Media query used for different size of view-points
 * Feminine and delicate UI 
   * Used a flower image and Google Fonts to give prettiness 
 
@@ -59,7 +59,7 @@ This site provides platform for a user to write journals.
 * DOM with JQuery for interaction with Back-end reponses
   * Data from database is showing in the UI with DOM 
 
-### Part 2: BackEnd
+### Part 2: Backend
 
 #### ExpressJS
 
