@@ -110,4 +110,4 @@ This site provides platform for a user to write journals.
 Copyright (c) 2020 **_Jiwon Han_**
 
 [//]: # (HyperLinks)
-[license]: https://github.com/jiwon-seattle/My-Daily-Journal/master/LICENSE.md
+[license]: https://github.com/jiwon-seattle/My-Daily-Journal/blob/master/LICENSE.md
