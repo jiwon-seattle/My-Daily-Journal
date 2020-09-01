@@ -20,7 +20,7 @@ app.use(express.static('website'));
 require('./routers/routes')(app);
 
 // Setup server
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`running on localhost: ${port}`);
 });
