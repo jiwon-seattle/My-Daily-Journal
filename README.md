@@ -34,6 +34,7 @@ The site is automatically hosted in http://localhost:8000. Open `index.html`
 
 This site provides platform for a user to write journals. 
 
+1. Web app asks a user to allow share user's location information by giving pop-up. A user accepts it. 
 1. A user is able to write journal.
 2. When a user clicks `Generate` button, the journal is saved to database.
 3. Daily weather information automatically is fetched via Weather API and saved to database.
@@ -66,8 +67,8 @@ This site provides platform for a user to write journals.
   * Middleware that only parses JSON and a protocol that enables scripts running on a browser client to interact with resources from a different origin.
 * router
   * `/weather` is base url and GET/POST request is made to the url.
-* Weahter API
-  * A weather information is fetched via the API in the client-side and a weather condition is sent to server-side to save in the database.
+* Geolocation API & Weahter API
+  * Geolocation API returns a user's location with latitude and longitude. With these information, a weather information is fetched via the API in the client-side and a weather condition is sent to server-side to save in the database.
 
 #### MongoDB
 
@@ -84,6 +85,7 @@ This site provides platform for a user to write journals.
 - [NodeJS](https://nodejs.org/en/) as core stack
 - [ExpressJS](https://expressjs.com/) for server-side rendering
 - [MongoDB](https://www.mongodb.com/) for non-relational database
+- [HTML Geolocation API](https://www.w3schools.com/html/html5_geolocation.asp) to locate the user's position
 - [Weather API](https://openweathermap.org/api) for weather api
 - [Heroku](https://heroku.com) for deployment
 - [Unsplash](https://unsplash.com/) for images
