@@ -21,6 +21,8 @@ Currently the app is deployed via Heroku. Visit https://my-daily-journal-jw.hero
 
 ### To run dev mode locally:
 
+[Weather API](https://openweathermap.org/api) is needed to run development mode. Please have the api and put it into `const apiKey = HERE!` in app.js in website folder. 
+
 ```bash
   $ git clone https://github.com/jiwon-seattle/My-Daily-Journal.git
   $ cd website
