@@ -5,7 +5,7 @@ let lat;
 let lon;
 
 let weatherApi;
-const apiKey = '&appid=71fab47d50ab677f3ba01bf8eef6dc41';
+const apiKey = '';
 
 function success (pos) {
   const crd = pos.coords;
