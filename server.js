@@ -15,7 +15,6 @@ app.use(cors());
 // Initialize the main poject folder
 app.use(express.static('website'));
 
-
 // router
 require('./routers/routes')(app);
 
@@ -39,3 +38,9 @@ db.mongoose
     console.log("Cannot connect to the database!", err);
     process.exit();
   });
+
+  // Api key env
+  const config = require("dotenv").config();
+  const apiKey = process.env.API_KEY;
+  console.log(apiKey)
+  exports.apiKey = apiKey;

@@ -1,7 +1,7 @@
 
 module.exports = mongoose => {
   const Journal = mongoose.model(
-    "heroku_56vg5r9k",
+    "journals",
     mongoose.Schema(
       {
         date: String,

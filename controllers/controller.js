@@ -1,7 +1,7 @@
 
 // db controller
 const db = require('../models');
-const Journal = db.heroku_56vg5r9k;
+const Journal = db.journals;
 
 exports.post = (req, res) => {
   if (!req.body) {
@@ -38,3 +38,4 @@ exports.findAll = (req, res) => {
     });
   });
 };
+

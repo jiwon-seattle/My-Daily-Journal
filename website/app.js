@@ -11,10 +11,7 @@ function success (pos) {
   const crd = pos.coords;
   lat = crd.latitude;
   lon = crd.longitude;
-  weatherApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
-  console.log(lat);
-  console.log(lon);
-  console.log(weatherApi);
+  weatherApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
 };
 
 function error(err) {
@@ -42,14 +39,13 @@ const initialState = async() => {
 
 // new date 
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = `${d.getMonth() + 1}`+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // Get Data
 const getData = async (url = '') => {
   try {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
     return data;
   } catch(error) {
     console.log(error);
@@ -70,11 +66,8 @@ const postData = async (url = '', data = {}) => {
 };
 
 const updateData = async() => {
-  console.log('updateData');
 
   const data = await getData('/weather');
-  console.log('updateData');
-  console.log(data)
   let i;
   for (i = 0; i < data.length; i++) {
     let div = document.createElement("div");
@@ -118,7 +111,6 @@ const updateData = async() => {
 
 const generateData = async() => {
   const feelings = document.getElementById('feelings').value;
-  // const zip = document.getElementById('zip').value;
   const response = await fetch(`${weatherApi}${apiKey}`);
 
   try {
@@ -127,7 +119,6 @@ const generateData = async() => {
     projectData.weather = data.weather[0].main;
     projectData.feelings = feelings;
     projectData.date = newDate;
-    console.log(projectData);
     await postData('/weather', projectData);
   } catch (error) {
     console.error("error", error);
