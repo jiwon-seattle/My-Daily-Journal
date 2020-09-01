@@ -84,7 +84,7 @@ const updateData = async() => {
     document.getElementsByClassName('journal' + i)[0].style.width="200px"
     
     let y;
-    const divClasses = ['date', 'temperature', 'feelings'];
+    const divClasses = ['date', 'weather', 'feelings'];
     for (y = 0; y < divClasses.length; y++) {
       div = document.createElement("div");
       div.classList.add(divClasses[y]);
@@ -92,7 +92,26 @@ const updateData = async() => {
       
     }
     document.querySelector('.journal' + i + " " + '.date').innerHTML = `${data[i].date}`;
-    document.querySelector('.journal' + i + " " + '.temperature').innerHTML = `${data[i].temperature}`;
+    if(data[i].weather === "Clear") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/01d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    } else if (data[i].weather === "Clouds") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/03d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    } else if (data[i].weather === "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/50d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    } else if (data[i].weather === "Snow") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/13d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    } else if (data[i].weather === "Rain" || "Drizzle") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/10d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    } else if (data[i].weather === "Thunderstorm") {
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = `${data[i].weather}`;
+      document.querySelector('.journal' + i + " " + '.weather').innerHTML = "<p>Today's Weather :<img src=\"http://openweathermap.org/img/wn/11d@2x.png\" width=\"20px\" height=\"25px\"></p>";
+    }
+    
     document.querySelector('.journal' + i + " " + '.feelings').innerHTML = `${data[i].feelings}`;
   }
 };
@@ -105,7 +124,7 @@ const generateData = async() => {
   try {
     const data = await response.json();
     const projectData = {};
-    projectData.temperature = data.main.temp;
+    projectData.weather = data.weather[0].main;
     projectData.feelings = feelings;
     projectData.date = newDate;
     console.log(projectData);

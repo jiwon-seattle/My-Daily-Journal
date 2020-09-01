@@ -10,7 +10,7 @@ exports.post = (req, res) => {
   }
   const journal = new Journal({
     date: req.body.date,
-    temperature: req.body.temperature,
+    weather: req.body.weather,
     feelings: req.body.feelings,
   });
 

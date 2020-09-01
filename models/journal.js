@@ -5,7 +5,7 @@ module.exports = mongoose => {
     mongoose.Schema(
       {
         date: String,
-        temperature: Number,
+        weather: String,
         feelings: String,
       },
     )
