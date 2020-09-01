@@ -1,9 +1,27 @@
-.holder.headline {
+.holder.headline, .holder.footer p {
   font-family: 'Tangerine', serif;
   font-size: 48px;
 }
 
-body {
+.col-2, .col-10, .holder.entry {
   font-family:'Amatic SC', cursive;
-  text-align: center;
+}
+
+body {
+  width: 100%;
+  min-height: 700px;
+  border: 3px solid lightcoral;
+  background: url(../img/flower.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.personal.icons {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.personal.icons i {
+  color: black;
 }

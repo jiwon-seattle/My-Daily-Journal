@@ -93,14 +93,11 @@ const updateData = async() => {
     document.querySelector('.journal' + i + " " + '.temperature').innerHTML = `${data[i].temperature}`;
     document.querySelector('.journal' + i + " " + '.feelings').innerHTML = `${data[i].feelings}`;
   }
-  // document.getElementById('prevJournals').innerHTML = `${data.date}`;
-  // document.getElementById('temp').innerHTML = `${data.temperature}`;
-  // document.getElementById('content').innerHTML = data.feelings;
 };
 
 const generateData = async() => {
   const feelings = document.getElementById('feelings').value;
-  const zip = document.getElementById('zip').value;
+  // const zip = document.getElementById('zip').value;
   const response = await fetch(`${weatherApi}${apiKey}`);
 
   try {
