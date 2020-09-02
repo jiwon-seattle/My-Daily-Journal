@@ -17,11 +17,11 @@ A <strong>Udacity</strong> front-end <em>Weather Journal App </em> project. This
 
 ### To see Demo web app:
 
-Currently the app is deployed via Heroku. Visit https://my-daily-journal-jw.herokuapp.com/.
+Currently, the app is deployed via Heroku. Visit https://my-daily-journal-jw.herokuapp.com/.
 
 ### To run dev mode locally:
 
-[Weather API](https://openweathermap.org/api) is needed to run development mode. Please have the api and put it into `const apiKey = HERE!` in app.js in website folder. 
+[Weather API](https://openweathermap.org/api) is needed to run the development mode. Please have the API and put it into `const apiKey = HERE!` in app.js in the website folder. 
 
 ```bash
   $ git clone https://github.com/jiwon-seattle/My-Daily-Journal.git
@@ -34,16 +34,16 @@ The site is automatically hosted in http://localhost:8000. Open `index.html`
 
 ## Development
 
-This site provides platform for a user to write journals. 
+This site provides a platform for a user to write journals. 
 
 1. Web app asks a user to allow share user's location information by giving pop-up. A user accepts it. 
-1. A user is able to write journal.
-2. When a user clicks `Generate` button, the journal is saved to database.
-3. Daily weather information automatically is fetched via Weather API and saved to database.
-4. When a user clicks `PAST MY JOURNALS`, previous written journals are listed by date in ascending order.
+1. A user is able to write a journal.
+2. When a user clicks the `Generate` button, the journal is saved to the database.
+3. Daily weather information automatically is fetched via Weather API and saved to the database.
+4. When a user clicks `PAST MY JOURNALS`, previously written journals are listed by date in ascending order.
 5. Different weather image is displayed per a weather condition.
 6. When a user clicks `WRITE TODAY'S JOURNAL`, writing section is back.
-7. A user is able to navigate developer's contact pages by clicking icons in the footer section.
+7. A user is able to navigate the developer's contact pages by clicking icons in the footer section.
 
 <img src="website/img/website.png" width="700px" height="350px" />
 
@@ -59,7 +59,7 @@ This site provides platform for a user to write journals.
 #### DOM
 
 * DOM with JQuery for interaction with Back-end responses
-  * Data from database is showing in the UI with DOM 
+  * Data from the database is showing in the UI with DOM 
 
 ### Part 2: Backend
 
@@ -68,9 +68,9 @@ This site provides platform for a user to write journals.
 * bodyparser & cors
   * Middleware that only parses JSON and a protocol that enables scripts running on a browser client to interact with resources from a different origin.
 * router
-  * `/weather` is base url and GET/POST request is made to the url.
-* Geolocation API & Weahter API
-  * Geolocation API returns a user's location with latitude and longitude. With these information, a weather information is fetched via the API in the client-side and a weather condition is sent to server-side to save in the database.
+  * `/weather` is the base URL and GET/POST request is made to the URL.
+* Geolocation API & Weather API
+  * Geolocation API returns a user's location with latitude and longitude. With this information, weather information is fetched via the API in the client-side and a weather condition is sent to the server-side to save in the database.
 
 #### MongoDB
 
@@ -95,7 +95,7 @@ This site provides platform for a user to write journals.
  ## Future Development
  1. env setting for Weather API
 
- 2. Auth feature : LogIn/Out
+ 2. Auth feature: Login/out
 
  3. Edit/Delete for past journals
 
