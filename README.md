@@ -58,7 +58,7 @@ This site provides a platform for a user to write journals.
 
 #### DOM
 
-* DOM with JQuery for interaction with Back-end responses
+* DOM for interaction with Back-end responses
   * Data from the database is showing in the UI with DOM 
 
 ### Part 2: Backend
